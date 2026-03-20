@@ -42,8 +42,9 @@ body {
 
 /* Logo above title */
 .logo {
-    width: 300px;  /* adjust size as needed */
-    margin-bottom: 5px; /* space between logo and title */
+    width: 25vw;      /* responsive size */
+    max-width: 300px; /* prevents it from getting too big on desktop */
+    margin-bottom: 5px;
 }
 
 /* Chicken image animation */
@@ -94,25 +95,6 @@ body {
         font-size: 14px;
         top: 10px;
         left: 10px;
-    }
-
-    /* adjust animation distance for smaller screen */
-    @keyframes runChicken {
-        0% {
-            left: 0;
-            transform: scaleX(-1);
-        }
-        50% {
-            left: calc(100% - 100px);
-            transform: scaleX(-1);
-        }
-        51% {
-            transform: scaleX(1);
-        }
-        100% {
-            left: 0;
-            transform: scaleX(1);
-        }
     }
 }
 
