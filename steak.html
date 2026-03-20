@@ -72,6 +72,47 @@ body {
     }
 }
 
+@media screen and (max-width: 480px) {
+
+    .logo {
+        width: 80px;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .chicken {
+        width: 80px;
+        bottom: 30px;
+    }
+
+    .back {
+        font-size: 14px;
+        top: 10px;
+        left: 10px;
+    }
+
+    /* adjust animation distance for smaller screen */
+    @keyframes runChicken {
+        0% {
+            left: 0;
+            transform: scaleX(-1);
+        }
+        50% {
+            left: calc(100% - 100px);
+            transform: scaleX(-1);
+        }
+        51% {
+            transform: scaleX(1);
+        }
+        100% {
+            left: 0;
+            transform: scaleX(1);
+        }
+    }
+}
 
 </style>
 
