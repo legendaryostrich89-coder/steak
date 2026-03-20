@@ -5,11 +5,9 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 
-    /* Background image with overlay */
     background: 
         linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
         url("plate.png") no-repeat center center/cover;
-    background-size: 60%;
 
     display: flex;
     justify-content: center;
@@ -18,35 +16,42 @@ body {
     text-align: center;
 }
 
-/* Main container */
+/* Container */
 .container {
     padding: 20px;
-    background: transparent;
-    box-shadow: none;
 }
 
 /* Logo */
 .logo {
-    width: 500px;
-    margin-bottom: 30px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 300px; /* smaller base size */
+    max-width: 70vw; /* scales nicely on phones */
+    margin-bottom: 25px;
 }
 
 /* Button */
 .button {
     display: inline-block;
-    padding: 16px 50px;
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
+    padding: 14px 40px; /* slightly tighter */
+    font-size: 18px;
     border-radius: 40px;
     background-color: #A62800;
-    color: #ffffff;
+    color: #fff;
+    text-decoration: none;
     transition: all 0.25s ease;
 }
 
+/* ===== 📱 MOBILE TWEAKS (subtle, not drastic) ===== */
+@media screen and (max-width: 480px) {
+
+    .logo {
+        width: 220px; /* still prominent */
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 12px 28px;
+    }
+}
 </style>
 
 <div class="container">
@@ -56,3 +61,5 @@ body {
 <a href="steak.html" class="button">Book steak date 🤤</a>
 
 </div>
+
+
